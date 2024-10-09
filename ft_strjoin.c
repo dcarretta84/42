@@ -16,18 +16,18 @@ of ’s1’ and ’s2’.*/
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-    size_t  len_s1;
-    size_t  len_s2;
     size_t  tot_len;
     size_t  x;
     size_t  y;
 
+if (!s1)
+	 return (s2);
+else if (!s2)
+     return (s1);
     x = 0;
     y = 0;
-    len_s1 = strlen(s1);
-    len_s2 = strlen(s2);
-    tot_len = len_s1 + len_s2 + 1;
-    char *array = (char *)malloc(tot_len * (sizeof(char)));
+    tot_len = strlen(s1) + stelen(s2);
+    char *array = (char *)malloc((tot_len + 1) * (sizeof(char)));
     if (array == NULL)
         return (NULL);
 

@@ -23,9 +23,9 @@ char *ft_strtrim(char const *s1, char const *set)
 
     x = 0;
     y = x + 1;
-    char car = *set;
+    
     //Find the caracter pointer start
-    char * start_p = strchr(s1, car);
+    char *start_p = strchr(s1, car);
     //Return if the caracter searched is not present
     if (start_p == NULL)
         return (NULL);
@@ -42,8 +42,6 @@ char *ft_strtrim(char const *s1, char const *set)
       array[x] = start_p[y];
       y++;
       x++;
-
-
     }
     array[x] = '\0';
     return (array);
